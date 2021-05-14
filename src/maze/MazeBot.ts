@@ -14,15 +14,21 @@ class MazeBot {
     this.$ = cheerio.load(html);
   }
 
-  public execute(): Products[] {
-    const products = this.getProductsName().map((name, index) => ({
-      name,
-      img: this.getProductsImg()[index],
-      url: this.getProductsUrl()[index],
-      preco: this.getProductsPreco()[index]
-    }));
+  public execute(): Promise<Products[]> {
+    return new Promise((resolve, reject) => {
+      try {
+        const products = this.getProductsName().map((name, index) => ({
+          name,
+          img: this.getProductsImg()[index],
+          url: this.getProductsUrl()[index],
+          preco: this.getProductsPreco()[index]
+        }));
 
-    return products;
+        resolve(products);
+      } catch (e) {
+        reject(e);
+      }
+    });
   }
 
   private getProductsUrl(): string[] {
