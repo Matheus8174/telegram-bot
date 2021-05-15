@@ -25,6 +25,7 @@
   },
   "dependencies": {
     "cheerio": "^1.0.0-rc.9",
+    "reflect-metadata": "^0.1.13",
     "request": "^2.88.2",
     "typeorm": "^0.2.32"
   }
