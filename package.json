@@ -25,6 +25,7 @@
   },
   "dependencies": {
     "cheerio": "^1.0.0-rc.9",
-    "request": "^2.88.2"
+    "request": "^2.88.2",
+    "typeorm": "^0.2.32"
   }
 }
