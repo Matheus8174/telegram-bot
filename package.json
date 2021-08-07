@@ -6,9 +6,12 @@
   "scripts": {
     "typeorm": "ts-node-dev ./node_modules/typeorm/cli.js",
     "dev:maze": "SET NODE_ENV=development && ts-node-dev --inspect --transpile-only --ignore-watch node_modules src/MazeBot/index.ts",
-    "dev": "SET NODE_ENV=development && ts-node-dev --inspect --transpile-only --ignore-watch node_modules src/index.ts"
+    "dev:nike": "SET NODE_ENV=development && ts-node-dev --inspect --transpile-only --ignore-watch node_modules src/NikeBot/index.ts",
+    "dev": "SET NODE_ENV=development && ts-node-dev --inspect --transpile-only --ignore-watch node_modules src/index.ts",
+    "dev:telegram": "SET NODE_ENV=development && ts-node-dev --inspect --transpile-only --ignore-watch node_modules src/telegram/telegramBot.ts"
   },
   "devDependencies": {
+    "@types/node-cron": "^2.0.3",
     "@types/request": "^2.48.5",
     "@typescript-eslint/eslint-plugin": "^4.22.0",
     "@typescript-eslint/parser": "^4.22.0",

@@ -20,6 +20,7 @@
   ],
   "ignorePatterns": "build",
   "rules": {
+    "no-useless-escape": "off",
     "prettier/prettier": "error"
   }
 }
